@@ -1,3 +1,5 @@
+import '../styles/globals.css'
+
 export default function RootLayout({
   children,
 }: {
@@ -6,7 +8,16 @@ export default function RootLayout({
   return (
     <html>
       <head />
-      <body>{children}</body>
+      <body>
+        <div>
+
+          {/* Sidebar */}
+          {/* Client Provider -Thinking Notification */}
+
+          <div className='bg-[#181818] flex-1' >{children}</div>
+
+        </div>
+      </body>
     </html>
   )
 }
