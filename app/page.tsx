@@ -1,15 +1,27 @@
+import Hero from "../components/Hero"
+import Navbar from "../components/Navbar"
 import Panel from "../components/Panel"
+import Sidebar from "../components/Sidebar"
 
 
 function HomePage() {
   return (
-    <div className=" flex flex-col items-center h-screen ">
+    <div className=" flex flex-col h-screen ">
       {/* NAVBAR */}
-      <h1 className="text-7xl w-fit font-bold mt-40 mb-20 text-white ">ChatGPT</h1>
+      <div className="mx-5">
 
-      <div className="h-1 rounded-full bg-gradient-to-r to-violet-600 from-pink-600 w-3/4"></div>
+        <Navbar/>
+      </div>
+
       
-    <Panel/>
+        <Hero/>
+      
+      
+      
+    {/* <Panel/> */}  
+    
+
+
       
 
       
