@@ -3,7 +3,7 @@ import Newchat from './Newchat'
 
 function Sidebar() {
   return (
-    <div className='p-2 flex flex-col h-screen w-1/5 bg-black'>
+    <div className='p-2 flex flex-col h-screen bg-black'>
       {/* <h1>Side bar goes here</h1> */}
 
       <div className='flex-1'>

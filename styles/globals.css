@@ -6,3 +6,9 @@
 .card-border{
     @apply absolute p-10 w-full  -inset-1 group-hover:bg-gradient-to-r to-violet-600 from-pink-600 rounded-lg blur opacity-75 transition duration-500 group-hover:animate-tilt
 }
+
+@layer components {
+    .chatRow {
+        @apply rounded-lg px-5 py-3 text-sm flex items-center justify-center space-x-2 hover:bg-gray-700/70 cursor-pointer text-white transition-all duration-200 ease-out
+    }
+}
