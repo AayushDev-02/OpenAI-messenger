@@ -8,7 +8,7 @@ type Props = {
   }
 }
 function page({params: {id}} :Props) {
-  console.log(id);
+  // console.log(id);
   return (
     <div>
       <h1 className='flex flex-col h-screen overflow-hidden '>
