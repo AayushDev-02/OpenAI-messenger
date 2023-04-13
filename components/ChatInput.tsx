@@ -14,8 +14,8 @@ type Props = {
 
 
 function ChatInput({chatId}: Props) {
-    const { data: session } = useSession();
     const [prompt, setPrompt] = useState("");
+    const { data: session } = useSession();
 
     //useSWR to get the model
     const model = "text-davinci-003";
@@ -47,19 +47,19 @@ function ChatInput({chatId}: Props) {
 
         //fetch
         await fetch('/api/askQuestion', {
-            method: 'POST',
+            method: "POST",
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
                 prompt: input, chatId, model, session
-            })
+            }),
         }).then(() => {
             //toast notification to say successfull
             toast.success("Response Generated", {
               id:notification,
             });
-        })
+        });
     };
 
 

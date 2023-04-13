@@ -12,4 +12,4 @@ function Chat({chatId} :Props) {
   )
 }
 
-export default Chat
+export default Chat;
