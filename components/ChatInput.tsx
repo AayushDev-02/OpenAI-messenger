@@ -1,9 +1,11 @@
 'use client'
 
-import { serverTimestamp } from 'firebase/firestore'
+import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
 import { useSession } from 'next-auth/react'
 import { FormEvent, useState } from 'react'
 import { FaPaperPlane } from 'react-icons/fa'
+import { db } from '../firebase'
+import toast from 'react-hot-toast';
 
 type Props = {
     chatId: string
@@ -14,6 +16,9 @@ type Props = {
 function ChatInput({chatId}: Props) {
     const { data: session } = useSession();
     const [prompt, setPrompt] = useState("");
+
+    //useSWR to get the model
+    const model = "text-davinci-003";
 
     const sendMessage = async(e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -27,13 +32,34 @@ function ChatInput({chatId}: Props) {
 
         const message: Message = {
             text:input, 
-            createAt: serverTimestamp(),
+            createdAt: serverTimestamp(),
             user: {
                 _id: session?.user?.email!,
-                _name: session?.user?.name!,
+                name: session?.user?.name!,
                 avatar: session?.user?.image! || `https://ui-avatars.com/api/?name=${session?.user?.name}`,
             }
         }
+
+        await addDoc(collection(db,"users", session?.user?.email!, "chats", chatId, "messages"), message)
+
+        // toast notification to say loading
+        const notification = toast.loading('Open AI is Thinking...');
+
+        //fetch
+        await fetch('/api/askQuestion', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                prompt: input, chatId, model, session
+            })
+        }).then(() => {
+            //toast notification to say successfull
+            toast.success("Response Generated", {
+              id:notification,
+            });
+        })
     };
 
 
