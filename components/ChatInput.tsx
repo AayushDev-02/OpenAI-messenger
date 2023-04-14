@@ -6,6 +6,7 @@ import { FormEvent, useState } from 'react'
 import { FaPaperPlane } from 'react-icons/fa'
 import { db } from '../firebase'
 import toast from 'react-hot-toast';
+import ModalSelection from './ModalSelection'
 
 type Props = {
     chatId: string
@@ -73,8 +74,9 @@ function ChatInput({chatId}: Props) {
         <button disabled={!prompt || !session} type='submit' className='text-white bg-green-500 px-4 py-3 disabled:bg-gray-300 disabled:cursor-not-allowed font-bold rounded'><FaPaperPlane/></button>
       </form>
 
-      <div>
+      <div className='md:hidden'>
         {/* Modal Selection */}
+        <ModalSelection/>
       </div>
     </div>
   )

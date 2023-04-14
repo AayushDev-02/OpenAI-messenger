@@ -7,7 +7,7 @@ type Option = {
 };
 
 type Data = {
-    modelOption: Option[];
+    modelOptions: Option[];
 }
 
 export default async function handler(
@@ -16,13 +16,13 @@ export default async function handler(
 ) {
     const models = await openai.listModels().then((res) => res.data.data);
 
-    const modelOption = models.map((model) => ({
+    const modelOptions = models.map((model) => ({
         value : model.id,
         label: model.id,
     }));
 
     res.status(200).json({
-        modelOption,
+        modelOptions,
     })
     
 }
