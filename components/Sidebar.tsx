@@ -50,7 +50,7 @@ function Sidebar() {
 
 
       {session &&
-        <img src={session.user?.image! || '/images/aayush.png'} alt="Profile Picture"
+        <img src={'/images/aayush.png' || session.user?.image! } alt="Profile Picture"
           className='h-12 w-12 rounded-full cursor-pointer mx-auto mb-2 hover:opacity-50'
           onClick={() => signOut()}
         />
