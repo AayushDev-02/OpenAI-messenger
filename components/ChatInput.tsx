@@ -18,7 +18,7 @@ type Props = {
 function ChatInput({ chatId }: Props) {
   const [prompt, setPrompt] = useState("");
   const { data: session } = useSession();
-  
+
   //useSWR to get the model
   const { data: model } = useSWR('model', {
     fallbackData: 'text-davinci-003'
@@ -72,11 +72,14 @@ function ChatInput({ chatId }: Props) {
 
 
   return (
-    <div className='bg-gray-700/50 text-gray-400 text-sm outline-none rounded-lg'>
-      <form onSubmit={e => sendMessage(e)} className='p-5 space-x-5 flex' >
-        <input disabled={!session} className='focus:outline-none bg-transparent flex-1 disabled:cursor-not-allowed disabled:text-gray-300' value={prompt} onChange={e => setPrompt(e.target.value)} type="text" placeholder='Type your message here...' />
-
-        <button disabled={!prompt || !session} type='submit' className='text-white bg-green-500 px-4 py-3 disabled:bg-gray-300 disabled:cursor-not-allowed font-bold rounded'><FaPaperPlane /></button>
+    <div className='bg-secondary mb-5 text-primary_text text-sm outline-none rounded-2xl mx-5 mr-7'>
+      <form onSubmit={e => sendMessage(e)} className='flex' >
+        <div className=' flex-1'>
+          <input disabled={!session} className='focus:outline-none bg-transparent w-full px-5 py-3 disabled:cursor-not-allowed disabled:text-gray-300' value={prompt} onChange={e => setPrompt(e.target.value)} type="text" placeholder='Type your message here...' />
+        </div>
+        
+          <button disabled={!prompt || !session} type='submit' className='text-white bg-brand px-12 py-4 disabled:bg-tertiary disabled:cursor-not-allowed font-bold rounded-r-2xl'><FaPaperPlane /></button>
+        
       </form>
 
       <div className='md:hidden'>

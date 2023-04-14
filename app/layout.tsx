@@ -27,7 +27,7 @@ export default async function RootLayout({
 
             <div className='flex'>
 
-              <div className='max-w-xs h-screen overflow-y-auto md:min-w-[20rem] bg-primary'>
+              <div className='max-w-xs h-screen overflow-y-auto md:min-w-[20rem] bg-primary scrollbar-thin scrollbar-track-primary scrollbar-thumb-secondary_brand scrollbar-thumb-rounded-full'>
                 {/* Sidebar */}
                 <Sidebar />
               </div>

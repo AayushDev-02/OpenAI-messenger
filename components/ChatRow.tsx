@@ -39,7 +39,7 @@ function ChatRow({ id }: Props) {
             <p className="text-secondary_text flex-1 hidden md:inline-flex truncate">
                 {messages?.docs[messages?.docs.length - 1]?.data().text || 'New Chat'}
             </p>
-            <FaTrashAlt onClick={removeChat} className="text-red-600 hover:text-red-700" />
+            <FaTrashAlt onClick={removeChat} className="text-secondary_text hover:text-red-600" />
         </Link>
     )
 }

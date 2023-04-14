@@ -30,7 +30,7 @@ function Newchat() {
   const index = Math.floor(Math.random() * arr.length);
   
   return (
-    <div className=" space-y-5 py-5 rounded-r-2xl bg-secondary">
+    <div className=" space-y-5 py-5 rounded-r-2xl bg-secondary mr-2">
       <div className="flex justify-center items-center ">
         <Image className="rounded-2xl shadow-xl" src={`/images/${arr[index]}`} alt="robot" width={200} height={100} />
       </div>

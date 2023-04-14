@@ -19,7 +19,7 @@ function Sidebar() {
 
 
   return (
-    <div className=' flex flex-col h-screen bg-primary  rounded-r-2xl font-poppins'>
+    <div className=' flex flex-col h-screen bg-primary  rounded-r-2xl font-poppins  '>
       {/* <h1>Side bar goes here</h1> */}
 
       <div className='flex-1'>
@@ -53,7 +53,7 @@ function Sidebar() {
 
       {session &&
         <>
-          <div className='flex font-poppins items-center justify-around bg-secondary rounded-r-2xl px-1 py-4 mb-4 mr-2'>
+          <div className='flex font-poppins items-center justify-around bg-secondary rounded-r-2xl px-1 py-4 mb-5 mr-2 mt-4'>
             <div className='flex space-x-3'>
               <img src={session.user?.image! || '/images/aayush.png'} alt="Profile Picture"
                 className='rounded-full h-10 w-10'
