@@ -35,11 +35,11 @@ function ChatRow({ id }: Props) {
     }
 
     return (
-        <Link href={`/chat/${id}`} className={`chatRow justify-center ${active && 'bg-gray-700'}`}>
-            <p className="text-white flex-1 hidden md:inline-flex truncate">
+        <Link href={`/chat/${id}`} className={`chatRow justify-center ${active && 'bg-secondary_brand'}`}>
+            <p className="text-secondary_text flex-1 hidden md:inline-flex truncate">
                 {messages?.docs[messages?.docs.length - 1]?.data().text || 'New Chat'}
             </p>
-            <FaTrashAlt onClick={removeChat} className="text-white hover:text-red-700" />
+            <FaTrashAlt onClick={removeChat} className="text-red-600 hover:text-red-700" />
         </Link>
     )
 }

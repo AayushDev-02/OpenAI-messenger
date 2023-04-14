@@ -9,6 +9,6 @@
 
 @layer components {
     .chatRow {
-        @apply rounded-lg px-5 py-3 text-sm flex items-center justify-center space-x-2 hover:bg-gray-700/70 cursor-pointer text-white transition-all duration-200 ease-out
+        @apply rounded-full px-5 py-3 text-sm flex items-center justify-center space-x-2 hover:bg-secondary_brand cursor-pointer text-white transition-all duration-200 ease-out
     }
 }

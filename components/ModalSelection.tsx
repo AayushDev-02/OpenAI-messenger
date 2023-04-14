@@ -13,7 +13,7 @@ function ModalSelection() {
     });
 
   return (
-    <div className='mt-4'>
+    <div className='mt-5'>
       <Select
         className='mt-2'
         options={models?.modelOptions}
@@ -23,7 +23,7 @@ function ModalSelection() {
         isLoading={isLoading}
         menuPosition='fixed'
         classNames={{
-            control: (state) => "bg-[#434654] border-[#434654]"
+            control: (state) => "bg-secondary border-secondary rounded-2xl text-secondary_text focus:outline-none ",
         }}
 
         onChange={(e) => setModel(e.value)}
