@@ -21,7 +21,7 @@ function Chat({chatId} :Props) {
   ))
 
   return (
-    <div className="flex-1 overflow-y-auto overflow-x-hidden">
+    <div className="flex-1 overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-brand scrollbar-track-primary scrollbar-thumb-rounded-full">
         {messages?.empty && (
           <>
             <p className="mt-10 text-2xl text-center text-white">Type a prompt in below to get started!</p>
