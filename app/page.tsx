@@ -6,7 +6,7 @@ import Sidebar from "../components/Sidebar"
 
 function HomePage() {
   return (
-    <div className=" flex flex-col h-screen ">
+    <div className=" flex flex-col h-screen bg-primary">
       {/* NAVBAR */}
       <div className="mx-5">
 

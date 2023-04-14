@@ -18,7 +18,7 @@ function Sidebar() {
 
 
   return (
-    <div className='p-2 flex flex-col h-screen bg-black'>
+    <div className='p-2 flex flex-col h-screen bg-secondary'>
       {/* <h1>Side bar goes here</h1> */}
 
       <div className='flex-1'>
@@ -50,7 +50,7 @@ function Sidebar() {
 
 
       {session &&
-        <img src={'/images/aayush.png' || session.user?.image! } alt="Profile Picture"
+        <img src={ session.user?.image! || '/images/aayush.png' } alt="Profile Picture"
           className='h-12 w-12 rounded-full cursor-pointer mx-auto mb-2 hover:opacity-50'
           onClick={() => signOut()}
         />

@@ -18,7 +18,7 @@ export default async function RootLayout({
   return (
     <html>
       <head />
-      <body>
+      <body className='scrollbar-thin scrollbar-track-primary scrollbar-thumb-brand scrollbar-thumb-rounded-full'>
         <SessionProvider session={session}>
           {!session ? (
             <Login />
@@ -35,7 +35,7 @@ export default async function RootLayout({
               {/* Client Provider -Thinking Notification */}
               <ClientProvider/>
 
-              <div className='bg-[#181818] flex-1' >{children}</div>
+              <div className='bg-primary flex-1' >{children}</div>
 
             </div>
           )}
