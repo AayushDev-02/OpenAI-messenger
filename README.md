@@ -1,4 +1,4 @@
-# Next.js + Tailwind CSS Example
+# Open AI Messenger - Next JS + Tailwind CSS
 
 ![image](https://user-images.githubusercontent.com/105657470/232860535-4b007594-cdd1-44eb-930f-ce3828d578cf.png)
 ![image](https://user-images.githubusercontent.com/105657470/232861372-cc6798c1-bef0-4419-9d19-febe1fb0a26d.png)
