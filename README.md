@@ -1,4 +1,9 @@
-# Next.js + Tailwind CSS Example
+# Open AI Messenger - Next JS + Tailwind CSS
+
+![image](https://user-images.githubusercontent.com/105657470/232860535-4b007594-cdd1-44eb-930f-ce3828d578cf.png)
+![image](https://user-images.githubusercontent.com/105657470/232861372-cc6798c1-bef0-4419-9d19-febe1fb0a26d.png)
+![image](https://user-images.githubusercontent.com/105657470/232860824-6bf6a2a0-3133-45e8-9a7b-3b1013d9644f.png)
+![image](https://user-images.githubusercontent.com/105657470/232861172-f23dfcad-7912-4ced-8649-218dedbec868.png)
 
 This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.2)](https://tailwindcss.com/blog/tailwindcss-v3-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
 
