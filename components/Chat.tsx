@@ -25,10 +25,10 @@ function Chat({chatId} :Props) {
     <div className="flex-1 overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-brand scrollbar-track-primary scrollbar-thumb-rounded-full">
         {messages?.empty && (
           <>
-            <div clas>
-              <Image src='/images/robot2.png' alt="image" height={300} width={300}/>
-              <h1>Type a prompt to get started!</h1>
-              <FaArrowDown className="animate-bounce"/>
+            <div className="mx-auto w-fit mt-40 flex flex-col items-center justify-center space-y-10">
+              <Image className="rounded-2xl shadow-2xl " src='/images/robot2.png' alt="image" height={300} width={300}/>
+              <h1 className="text-5xl font-bold text-brand">Type a prompt to get started!</h1>
+              <FaArrowDown className="animate-bounce text-brand text-7xl"/>
             </div>
           </>
         )}
