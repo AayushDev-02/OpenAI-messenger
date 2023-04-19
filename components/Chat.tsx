@@ -2,8 +2,9 @@
 
 import { collection, orderBy, query } from "firebase/firestore";
 import { useSession } from "next-auth/react";
+import Image from "next/image";
 import { useCollection } from "react-firebase-hooks/firestore";
-import { FaArrowCircleDown } from "react-icons/fa";
+import { FaArrowCircleDown, FaArrowDown } from "react-icons/fa";
 import { db } from "../firebase";
 import Message from "./Message";
 
@@ -24,8 +25,11 @@ function Chat({chatId} :Props) {
     <div className="flex-1 overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-brand scrollbar-track-primary scrollbar-thumb-rounded-full">
         {messages?.empty && (
           <>
-            <p className="mt-10 text-2xl text-center text-white">Type a prompt in below to get started!</p>
-            <FaArrowCircleDown className="h-10 w-10 mx-auto mt-10 text-white animate-bounce"/>
+            <div clas>
+              <Image src='/images/robot2.png' alt="image" height={300} width={300}/>
+              <h1>Type a prompt to get started!</h1>
+              <FaArrowDown className="animate-bounce"/>
+            </div>
           </>
         )}
         {messages?.docs.map((message) => (
